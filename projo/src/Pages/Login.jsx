@@ -9,27 +9,28 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const submit = async (e) => {
-    e.preventDefault(); // Prevent form from refreshing the page
+
+  const login = async (e) => {
+    e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate ('/');
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      const user = result.user;
+      navigate('/');
     } catch (error) {
-      setError (error.message);
-    }
-  };
+      setError(error.message);
+    }}
 
   return (
     <div className='authContainer'>
       <h1>Login</h1>
       <p>{error}</p>
 
-      <form onSubmit={submit} >
+      <div  >
         <label htmlFor="email">Email</label>
         <input
           type='email'
           placeholder='Enter email...'
-          name="email"
+         value={email}
           required
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -38,13 +39,13 @@ function Login() {
         <input
           type='password'
           placeholder='Enter password...'
-          name="password"
+          value={password}
           required
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button >Login</button>
-      </form>
+        <button  onClick={login} >Login</button>
+      </div>
       <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
     </div>
   );
