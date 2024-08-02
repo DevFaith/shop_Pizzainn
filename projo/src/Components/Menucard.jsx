@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Menucard = (props) => {
-    console.log(props);
   return (
     <div className='menuItem'>
       <img src={props.image} alt={props.name} />
