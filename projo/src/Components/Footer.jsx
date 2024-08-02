@@ -17,7 +17,6 @@ const Footer = () => {
         <FaSquareFacebook />
         <FaLinkedin />
 
-
         </div>
         <p>&copy; 2024 PizzaHut</p>
     </div>
