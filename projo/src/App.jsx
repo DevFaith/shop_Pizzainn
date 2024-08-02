@@ -1,4 +1,3 @@
-
 import './App.css'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
@@ -8,6 +7,7 @@ import Contacts from './Pages/Contacts'
 import Menu from './Pages/Menu'
 import Signup from './Pages/Signup'
 import Login from './Pages/Login'
+import Admin from './Admindashboard/Addproducts'
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
@@ -26,6 +26,7 @@ function App() {
           <Route path='/menu' element={<Menu />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login/>} />
+          <Route path='/admin' element={<Admin />} />
         </Routes>
         <Footer />
       </BrowserRouter>
