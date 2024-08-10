@@ -28,6 +28,7 @@
     height: 350px;
     margin: 20px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 .menuItem img {
@@ -55,4 +56,19 @@
 .menuItem h1,
 .menuItem p {
     margin-left: 20px;
+}
+
+.button {
+    /* height: 40px; */
+    /* width: 100px; */
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 60%;
+    background-color: orange;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
 }
