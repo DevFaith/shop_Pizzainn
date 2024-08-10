@@ -12,7 +12,6 @@ function Addproducts() {
     const handleproduct = async (e)=> {
         e.preventDefault()
         try {
-        // imagestorage 
          const imageRef = ref(storage, 'productsimage'+ image.name);
           await uploadBytes(imageRef, image)
         
