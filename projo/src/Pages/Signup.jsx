@@ -5,7 +5,6 @@ import { db, auth } from '../Firebase/Config';
 import { doc, setDoc } from 'firebase/firestore';
 import { FcGoogle } from "react-icons/fc";
 import { signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
-
 function Signup() {
   const [Name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -13,7 +12,6 @@ function Signup() {
 
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
   const submit = async (e) => {
     e.preventDefault();
     try {
@@ -28,7 +26,7 @@ function Signup() {
       setError(error.message);
     }
   }
-
+  
   const signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     try {
