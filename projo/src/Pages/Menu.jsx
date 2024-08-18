@@ -31,7 +31,7 @@ const Menu = ({ handleCart }) => {
             name={product.name}
             price={product.price}
             image={product.image}
-            handleCart={() => handleCart(product)} // Pass product to handleCart
+            handleCart={() => handleCart(product)} 
           />
         ))}
       </div>
