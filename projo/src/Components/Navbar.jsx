@@ -9,7 +9,6 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../Firebase/Config';
 import '../Styles/Navbar.css';
 
-
 const Navbar = ({ cartItems, updateCartItemQuantity, deletecart }) => {
   const [user, setUser] = useState(null);
   const [cartOpen, setCartOpen] = useState(false);
@@ -77,6 +76,7 @@ const Navbar = ({ cartItems, updateCartItemQuantity, deletecart }) => {
                 <div className='cartdetails'>
                   <span className='name'>{item.name}</span>
                   <span className='price'>${item.price}</span>
+                  
                   <div className='quantityControls'>
                     <button onClick={() => updateCartItemQuantity(item, item.quantity - 1)}>-</button>
                     <span>{item.quantity}</span>
